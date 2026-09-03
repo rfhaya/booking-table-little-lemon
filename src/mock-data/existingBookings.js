@@ -1,0 +1,36 @@
+export const existingBookings = [
+  {
+    id: 1,
+    date: "2026-09-05",
+    time: "18:00",
+    duration: 2,
+    type: "table",
+    tableId: 11,
+    area: "indoor",
+  },
+  {
+    id: 2,
+    date: "2026-09-05",
+    time: "19:00",
+    duration: 2,
+    type: "table",
+    tableId: 23,
+    area: "outdoor",
+  },
+  {
+    id: 3,
+    date: "2026-09-06",
+    time: "18:00",
+    duration: 2,
+    type: "area",
+    roomId: "garden",
+  },
+  {
+    id: 4,
+    date: "2026-09-06",
+    time: "19:00",
+    duration: 2,
+    type: "area",
+    roomId: "main-dining",
+  },
+];

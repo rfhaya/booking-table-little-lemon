@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Karla:wght@400;500;600;700&family=Markazi+Text:wght@400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   ROOT
+========================= */
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background-color: #ffffff;
+  color: #333333;
+
+  font-family: "Karla", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+
+/* =========================
+   GLOBAL ELEMENTS
+========================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE SAFETY
+========================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #root,
+  .App {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}

@@ -1,0 +1,185 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+
+  gap: 1.8rem;
+
+  list-style: none;
+}
+
+
+/* =========================
+   NAVIGATION LINK
+========================= */
+
+.nav-link {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 0.5rem 0;
+
+  color: #333333;
+
+  font-family: "Karla", sans-serif;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #495e57;
+}
+
+
+/* =========================
+   ACTIVE UNDERLINE
+========================= */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background-color: #f4ce14;
+
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .nav-list {
+    gap: 1.1rem;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .nav {
+    display: none;
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 0;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    z-index: 99;
+  }
+
+
+  .nav.nav-open {
+    display: block;
+  }
+
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    gap: 0;
+
+    list-style: none;
+  }
+
+
+  .nav-item {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+
+  .nav-link {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 52px;
+
+    padding: 0;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    border: none;
+  }
+
+
+  .nav-link::after {
+    display: none;
+  }
+
+
+  .nav-link.active {
+    background-color: #f8f8f8;
+  }
+}

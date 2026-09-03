@@ -1,0 +1,55 @@
+import { useEffect, useRef, useState } from "react";
+import "./ScrollReveal.css";
+
+export default function ScrollReveal({
+  children,
+  animation = "fade-up",
+  delay = 0,
+  className = "",
+  as: Tag = "div",
+}) {
+  const elementRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = elementRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <Tag
+      ref={elementRef}
+      className={`
+        scroll-reveal
+        scroll-reveal--${animation}
+        ${isVisible ? "is-visible" : ""}
+        ${className}
+      `}
+      style={{
+        transitionDelay: `${delay}ms`,
+      }}
+    >
+      {children}
+    </Tag>
+  );
+}

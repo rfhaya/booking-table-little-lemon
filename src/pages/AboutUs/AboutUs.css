@@ -1,0 +1,1663 @@
+.restaurant-about-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* =========================================
+   SHARED TITLE LINE & EYEBROW
+========================================= */
+
+.restaurant-about-page .info-divider-line {
+  width: 50px;
+  height: 3px;
+  background-color: #f4ce14;
+  margin: 1rem 0 1.5rem;
+  border-radius: 2px;
+}
+
+.restaurant-about-page .badge-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  color: #495e57;
+  text-transform: uppercase;
+}
+
+.restaurant-about-page .badge-label-light {
+  color: #f4ce14;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.restaurant-about-page .showcase-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("../../assets/hero2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.restaurant-about-page .showcase-hero-veil {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(20, 12, 5, 0.95) 0%,
+    rgba(20, 12, 5, 0.88) 30%,
+    rgba(20, 12, 5, 0.55) 55%,
+    rgba(20, 12, 5, 0.15) 75%,
+    rgba(20, 12, 5, 0.05) 100%
+  );
+
+  z-index: 1;
+}
+
+.restaurant-about-page .showcase-hero-wrapper {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.restaurant-about-page .showcase-hero-body {
+  width: 100%;
+  max-width: 600px;
+
+  color: #ffffff;
+}
+
+.restaurant-about-page .showcase-hero-body h1 {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(4rem, 7vw, 5rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+
+  color: #ffffff;
+}
+
+.restaurant-about-page .showcase-hero-body h1 span {
+  color: #f4ce14;
+
+  font-family: "Dancing Script", cursive;
+  font-weight: 500;
+}
+
+.restaurant-about-page .showcase-hero-bar {
+  width: 55px;
+  height: 4px;
+
+  margin: 1.25rem 0;
+
+  background-color: #f4ce14;
+  border-radius: 10px;
+}
+
+.restaurant-about-page .showcase-hero-body p {
+  margin: 0 0 1rem;
+
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.restaurant-about-page .showcase-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: auto;
+  min-width: 200px;
+  height: 58px;
+
+  padding: 0 1.5rem;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  border-radius: 7px;
+
+  background-color: #f4ce14;
+  color: #333333;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 25px rgba(244, 206, 20, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.restaurant-about-page .showcase-hero-cta span {
+  flex-shrink: 0;
+
+  font-size: 1.3rem;
+
+  transition: transform 0.25s ease;
+}
+
+.restaurant-about-page .showcase-hero-cta:hover {
+  background-color: #e5bd00;
+  transform: translateY(-3px);
+}
+
+.restaurant-about-page .showcase-hero-cta:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   OUR STORY
+========================================= */
+
+.restaurant-about-page .legacy-section {
+  padding: 4rem 0 3rem;
+
+  background-color: #faf9f5;
+}
+
+.restaurant-about-page .legacy-wrapper {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: center;
+  gap: 3rem;
+}
+
+.restaurant-about-page .legacy-media-box {
+  width: 100%;
+  height: 470px;
+
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.restaurant-about-page .legacy-media-box img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.restaurant-about-page .legacy-text-box {
+  width: 100%;
+}
+
+.restaurant-about-page .legacy-text-box h2 {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(2.8rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+
+  color: #34463f;
+}
+
+.restaurant-about-page .legacy-text-box .info-divider-line {
+  width: 35px;
+  height: 2px;
+
+  margin: 0.7rem 0 1.3rem;
+
+  background-color: #d8aa32;
+  border-radius: 2px;
+}
+
+.restaurant-about-page .legacy-text-box p {
+  max-width: 560px;
+
+  margin: 0 0 0.85rem;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.75;
+
+  color: #5f6965;
+}
+
+/* =========================================
+   STORY FEATURES
+========================================= */
+
+.restaurant-about-page .pillars-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  margin-top: 2rem;
+}
+
+.restaurant-about-page .pillar-card {
+  min-width: 0;
+  min-height: 150px;
+
+  padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  border-right: 1px solid #ddd9d1;
+}
+
+.restaurant-about-page .pillar-card:last-child {
+  border-right: none;
+}
+
+.restaurant-about-page .pillar-icon-wrap {
+  width: auto;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 0.4rem;
+
+  background: transparent;
+  font-family: "Karla", sans-serif;
+  color: #718066;
+  font-size: 1.7rem;
+}
+
+.restaurant-about-page .pillar-card h3 {
+  margin: 0 0 0.5rem;
+
+  font-family: "Markazi Text", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  color: #3e4b46;
+}
+
+.restaurant-about-page .pillar-card p {
+  margin: 0;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  font-family: "Karla", sans-serif;
+  color: #5f6965;
+}
+
+/* =========================================
+   PERFECT FOR ANY OCCASION
+========================================= */
+
+.restaurant-about-page .perfect-occasion-section {
+  width: 100%;
+  padding: 5.5rem 0 5rem;
+}
+
+
+.restaurant-about-page .occasion-top {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.restaurant-about-page .occasion-top h2 {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(3rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+
+  color: #34463f;
+}
+
+
+.restaurant-about-page .occasion-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.65rem;
+
+  margin: 0.8rem 0;
+}
+
+
+.restaurant-about-page .occasion-divider span {
+  width: 38px;
+  height: 1px;
+
+  background-color: #d8aa32;
+}
+
+
+.restaurant-about-page .occasion-subtitle {
+  margin: 0 0 3rem;
+
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+
+  color: #68716d;
+}
+
+
+/* OCCASION GRID */
+
+.restaurant-about-page .occasion-grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 1.5rem;
+}
+
+
+/* OCCASION ITEM */
+
+.restaurant-about-page .occasion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.restaurant-about-page .occasion-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  border-radius: 50%;
+
+  background-color: #f0efe8;
+
+  color: #718066;
+
+  font-size: 1.15rem;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+.restaurant-about-page .occasion-item:hover .occasion-icon {
+  transform: translateY(-5px);
+
+  background-color: #e7e5dc;
+}
+
+
+.restaurant-about-page .occasion-item h3 {
+  margin: 0 0 0.5rem;
+
+  font-family: "Markazi Text", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  color: #34463f;
+}
+
+
+.restaurant-about-page .occasion-item p {
+  max-width: 165px;
+  margin: 0;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+
+  color: #737b77;
+}
+
+
+/* =========================================
+   OUR SERVICES
+========================================= */
+
+.restaurant-about-page .our-services-section {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #faf9f5;
+}
+
+
+.restaurant-about-page .our-services-inner {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(380px, 0.9fr) minmax(420px, 1.1fr);
+
+  gap: 5rem;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   SERVICES IMAGE
+========================================= */
+
+.restaurant-about-page .services-visual {
+  position: relative;
+
+  width: 100%;
+  height: 520px;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+}
+
+
+.restaurant-about-page .services-visual img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.7s ease;
+}
+
+
+.restaurant-about-page .services-visual:hover img {
+  transform: scale(1.04);
+}
+
+
+/* IMAGE LABEL */
+
+.restaurant-about-page .services-image-overlay {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  padding: 1rem 1.25rem;
+
+  background-color: rgba(52, 70, 63, 0.92);
+
+  color: #ffffff;
+}
+
+
+.restaurant-about-page .services-image-overlay span {
+  font-family: "Karla", sans-serif;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   SERVICES CONTENT
+========================================= */
+
+.restaurant-about-page .services-content {
+  min-width: 0;
+}
+
+
+.restaurant-about-page .services-heading {
+  margin-bottom: 1rem;
+}
+
+
+.restaurant-about-page .services-eyebrow {
+  display: block;
+
+  margin-bottom: 0.6rem;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  color: #718066;
+}
+
+
+.restaurant-about-page .services-heading h2 {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(3.2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+
+  color: #34463f;
+}
+
+
+.restaurant-about-page .services-title-line {
+  width: 45px;
+  height: 2px;
+
+  margin: 1rem 0 1.2rem;
+
+  background-color: #d8aa32;
+}
+
+
+.restaurant-about-page .services-heading p {
+  max-width: 550px;
+
+  margin: 0;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  color: #68716d;
+}
+
+
+/* =========================================
+   SERVICE LIST
+========================================= */
+
+.restaurant-about-page .services-list {
+  width: 100%;
+
+  border-top: 1px solid #ddd9d1;
+}
+
+
+.restaurant-about-page .services-list-item {
+  display: grid;
+
+  grid-template-columns: 52px 1fr;
+
+  column-gap: 1rem;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid #ddd9d1;
+
+  transition:
+    padding-left 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+.restaurant-about-page .services-list-item:hover {
+  padding-left: 0.6rem;
+}
+
+
+/* =========================================
+   SERVICE ICON
+========================================= */
+
+.restaurant-about-page .services-list-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #f1f0ea;
+
+  color: #718066;
+
+  font-size: 0.95rem;
+}
+
+
+/* =========================================
+   SERVICE TEXT
+========================================= */
+
+.restaurant-about-page .services-list-text {
+  position: relative;
+
+  padding-right: 2rem;
+}
+
+
+.restaurant-about-page .service-number {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  font-family: "Karla", sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  color: #b5b5ad;
+}
+
+
+.restaurant-about-page .services-list-text h3 {
+  margin: 0 0 0.35rem;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  color: #34463f;
+}
+
+
+.restaurant-about-page .services-list-text p {
+  max-width: 450px;
+
+  margin: 0;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+
+  color: #747b77;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.restaurant-about-page .services-main-button {
+  width: 175px;
+  height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 1.1rem;
+
+  margin-top: 2rem;
+
+  box-sizing: border-box;
+
+  border-radius: 3px;
+
+  background-color: #34463f;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+.restaurant-about-page .services-main-button:hover {
+  transform: translateY(-3px);
+
+  background-color: #495e57;
+}
+
+
+.restaurant-about-page .services-main-button svg {
+  transition: transform 0.25s ease;
+}
+
+
+.restaurant-about-page .services-main-button:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .restaurant-about-page .occasion-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2.5rem 2rem;
+  }
+
+
+  .restaurant-about-page .our-services-inner {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+
+  .restaurant-about-page .services-visual {
+    height: 430px;
+  }
+
+
+  .restaurant-about-page .services-content {
+    max-width: 700px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .restaurant-about-page .perfect-occasion-section {
+    padding: 4.5rem 0;
+  }
+
+
+  .restaurant-about-page .our-services-section {
+    padding: 4.5rem 0;
+  }
+
+
+  .restaurant-about-page .occasion-top,
+  .restaurant-about-page .our-services-inner {
+    width: calc(100% - 2.5rem);
+  }
+
+
+  .restaurant-about-page .occasion-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2.5rem 1rem;
+  }
+
+
+  .restaurant-about-page .services-heading h2 {
+    font-size: 3.5rem;
+  }
+
+
+  .restaurant-about-page .services-visual {
+    height: 360px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .restaurant-about-page .perfect-occasion-section,
+  .restaurant-about-page .our-services-section {
+    padding: 3.5rem 0;
+  }
+
+
+  .restaurant-about-page .occasion-top,
+  .restaurant-about-page .our-services-inner {
+    width: calc(100% - 2rem);
+  }
+
+
+  .restaurant-about-page .occasion-top h2 {
+    font-size: 2.7rem;
+  }
+
+
+  .restaurant-about-page .occasion-grid {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+
+  .restaurant-about-page .occasion-icon {
+    width: 66px;
+    height: 66px;
+  }
+
+
+  .restaurant-about-page .services-heading h2 {
+    font-size: 3rem;
+  }
+
+
+  .restaurant-about-page .services-visual {
+    height: 280px;
+  }
+
+
+  .restaurant-about-page .services-list-item {
+    grid-template-columns: 45px 1fr;
+
+    column-gap: 0.85rem;
+
+    padding: 1.1rem 0;
+  }
+
+
+  .restaurant-about-page .services-list-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .restaurant-about-page .services-list-text {
+    padding-right: 1.7rem;
+  }
+
+
+  .restaurant-about-page .services-main-button {
+    width: 100%;
+  }
+
+}
+
+/* =========================================
+   GLIMPSE INSIDE
+========================================= */
+
+.restaurant-about-page .gallery-showcase {
+  padding: 6rem 0;
+
+  background-color: #ffffff;
+}
+
+.restaurant-about-page .gallery-inner {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+.restaurant-about-page .gallery-inner h2 {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 500;
+
+  color: #37433f;
+}
+
+.restaurant-about-page .gallery-inner .info-divider-line {
+  margin: 1rem 0 2.5rem;
+}
+
+.restaurant-about-page .gallery-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.restaurant-about-page .gallery-tile-item {
+  height: 240px;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.restaurant-about-page .gallery-tile-item img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.restaurant-about-page .gallery-tile-item img:hover {
+  transform: scale(1.05);
+}
+
+.restaurant-about-page .gallery-link-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.restaurant-about-page .outline-navigation-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 1.25rem;
+  padding: 0.85rem 1.75rem;
+
+  border: 1px solid #7b8983;
+  border-radius: 6px;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  color: #495e57;
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.restaurant-about-page .outline-navigation-btn:hover {
+  background-color: #495e57;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   MEET THE CHEF
+========================================= */
+
+.restaurant-about-page .masterchef-section {
+  padding: 0.6rem 0rem;
+
+  background-color: #1a2e26;
+
+  color: #ffffff;
+}
+
+.restaurant-about-page .masterchef-grid {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.restaurant-about-page .masterchef-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurant-about-page .masterchef-bio h2 {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(2.8rem, 4vw, 3.8rem);
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+.restaurant-about-page .masterchef-accent-line {
+  width: 50px;
+  height: 3px;
+
+  margin: 0.75rem 0 1.25rem;
+
+  background-color: #f4ce14;
+  border-radius: 2px;
+}
+
+.restaurant-about-page .masterchef-bio p {
+  margin: 0 0 1.5rem;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.restaurant-about-page .masterchef-autograph {
+  display: inline-block;
+
+  margin-top: 0.25rem;
+
+  font-family: "Dancing Script", cursive;
+  font-size: 2.6rem;
+
+  color: #ffffff;
+}
+
+.restaurant-about-page .masterchef-photo-frame {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.restaurant-about-page .masterchef-photo-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.restaurant-about-page .masterchef-creed {
+  position: relative;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.restaurant-about-page .masterchef-creed h3 {
+  margin: 0 0 1rem;
+
+  font-family: "Markazi Text", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  color: #f4ce14;
+}
+
+.restaurant-about-page .masterchef-quote-icon {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;
+
+  color: #f4ce14;
+}
+
+.restaurant-about-page .masterchef-creed p {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: 1.4rem;
+  line-height: 1.4;
+
+  color: #ffffff;
+}
+
+.restaurant-about-page .masterchef-creed-deco {
+  position: absolute;
+
+  right: 1rem;
+  bottom: 1rem;
+
+  width: 65px;
+
+  opacity: 0.3;
+}
+
+/* =========================================
+   TESTIMONIAL
+========================================= */
+
+.restaurant-about-page .reviews-banner {
+  padding: 6rem 0;
+  background-color: #faf9f5;
+}
+
+.restaurant-about-page .reviews-wrapper {
+  width: min(1200px, calc(100% - 4rem));
+  height: 300px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 90px 1.35fr 1fr;
+  align-items: stretch;
+
+  gap: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+  border: 1px solid #e8e7e1;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================
+   QUOTE SYMBOL
+========================================= */
+
+.restaurant-about-page .reviews-quote-symbol {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 2.5rem;
+
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+
+  color: #f4ce14;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.restaurant-about-page .reviews-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 2.5rem 2rem 2.5rem 0;
+}
+
+.restaurant-about-page .reviews-text-group blockquote {
+  margin: 0 0 1.25rem;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(1.7rem, 2.3vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.3;
+
+  color: #37433f;
+}
+
+.restaurant-about-page .reviews-rating-stars {
+  margin-bottom: 0.7rem;
+
+  color: #f4ce14;
+  letter-spacing: 0.15rem;
+  font-size: 1rem;
+}
+
+.restaurant-about-page .reviews-text-group span {
+  font-family: "Karla", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  color: #68716d;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.restaurant-about-page .reviews-media-thumb {
+  position: relative;
+
+  width: 100%;
+  height: 300px;
+
+  overflow: hidden;
+}
+
+.restaurant-about-page .reviews-media-thumb img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* BLUR / FADE DI BAGIAN KIRI GAMBAR */
+.restaurant-about-page .reviews-media-thumb::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.95) 8%,
+    rgba(255, 255, 255, 0.75) 18%,
+    rgba(255, 255, 255, 0.35) 35%,
+    transparent 55%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CTA BANNER
+========================================= */
+
+.restaurant-about-page .calltoaction-ribbon {
+  position: relative;
+
+  padding: 5rem 0;
+
+  background-image: url("../../assets/restaurant.jpg");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.restaurant-about-page .calltoaction-veil {
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(7, 59, 45, 0.92);
+
+  z-index: 1;
+}
+
+.restaurant-about-page .calltoaction-inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+.restaurant-about-page .calltoaction-message h2 {
+  margin: 0;
+
+  font-family: "Markazi Text", serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+
+  color: #ffffff;
+}
+
+.restaurant-about-page .calltoaction-message h2 span {
+  color: #f4ce14;
+}
+
+.restaurant-about-page .calltoaction-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 58px;
+
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+
+  background-color: #f4ce14;
+
+  border-radius: 7px;
+
+  color: #26332f;
+
+  font-family: "Karla", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 25px rgba(244, 206, 20, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+
+  flex-shrink: 0;
+}
+
+.restaurant-about-page .calltoaction-action-btn span {
+  font-size: 1.3rem;
+
+  transition: transform 0.25s ease;
+}
+
+.restaurant-about-page .calltoaction-action-btn:hover {
+  background-color: #e5bd00;
+
+  transform: translateY(-3px);
+}
+
+.restaurant-about-page .calltoaction-action-btn:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .restaurant-about-page .masterchef-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .restaurant-about-page .masterchef-photo-frame {
+    height: 350px;
+  }
+
+  .restaurant-about-page .gallery-tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-about-page .reviews-wrapper {
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .restaurant-about-page .reviews-quote-symbol {
+    padding: 0;
+  }
+
+  .restaurant-about-page .reviews-text-group {
+    padding: 0;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - SMALL TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .restaurant-about-page .legacy-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .restaurant-about-page .legacy-media-box {
+    height: 400px;
+  }
+
+  .restaurant-about-page .calltoaction-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  /* Prevent horizontal overflow */
+  .restaurant-about-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+
+  .restaurant-about-page .showcase-hero {
+    width: 100%;
+    min-height: calc(100svh - 70px);
+
+    background-position: center center;
+  }
+
+  .restaurant-about-page .showcase-hero-wrapper {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 4rem 1.5rem 3rem;
+
+    box-sizing: border-box;
+  }
+
+  .restaurant-about-page .showcase-hero-body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .restaurant-about-page .showcase-hero-body h1 {
+    font-size: clamp(3rem, 13vw, 4rem);
+    line-height: 0.95;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .restaurant-about-page .showcase-hero-body p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .restaurant-about-page .showcase-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 100%;
+    height: 56px;
+
+    padding: 0 1.25rem;
+    margin-top: 1.25rem;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    font-size: 0.9rem;
+  }
+
+  /* OUR STORY */
+
+  .restaurant-about-page .legacy-section {
+    padding: 3.5rem 0;
+  }
+
+  .restaurant-about-page .legacy-wrapper {
+    width: calc(100% - 2.5rem);
+
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .restaurant-about-page .legacy-media-box {
+    height: 350px;
+  }
+
+  /* FEATURES */
+
+  .restaurant-about-page .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .restaurant-about-page .pillar-card {
+    min-height: auto;
+
+    padding: 0 0 1.5rem;
+
+    border-right: none;
+    border-bottom: 1px solid #ddd9d1;
+  }
+
+  .restaurant-about-page .pillar-card:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  /* GALLERY */
+
+  .restaurant-about-page .gallery-showcase {
+    padding: 4rem 0;
+  }
+
+  .restaurant-about-page .gallery-inner {
+    width: calc(100% - 2.5rem);
+  }
+
+  .restaurant-about-page .gallery-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-about-page .gallery-tile-item {
+    height: 220px;
+  }
+
+  /* CHEF */
+
+  .restaurant-about-page .masterchef-section {
+    padding: 3rem 0;
+  }
+
+  .restaurant-about-page .masterchef-grid {
+    width: calc(100% - 2.5rem);
+    gap: 2rem;
+  }
+
+  .restaurant-about-page .masterchef-photo-frame {
+    height: 320px;
+  }
+
+  .restaurant-about-page .masterchef-creed {
+    padding: 1.75rem;
+  }
+
+  /* REVIEW */
+
+  .restaurant-about-page .reviews-banner {
+    padding: 4rem 0;
+  }
+
+  .restaurant-about-page .reviews-wrapper {
+    width: calc(100% - 2.5rem);
+    height: auto;
+
+    padding: 1.5rem;
+
+    box-sizing: border-box;
+  }
+
+  .restaurant-about-page .reviews-media-thumb {
+    height: 250px;
+  }
+
+  /* CTA */
+
+  .restaurant-about-page .calltoaction-ribbon {
+    padding: 4rem 0;
+  }
+
+  .restaurant-about-page .calltoaction-inner {
+    width: calc(100% - 2.5rem);
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .restaurant-about-page .calltoaction-action-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .restaurant-about-page .showcase-hero-wrapper {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .restaurant-about-page .showcase-hero-body h1 {
+    font-size: 3.2rem;
+    line-height: 0.95;
+  }
+
+  .restaurant-about-page .badge-label {
+    font-size: 0.75rem;
+  }
+
+  .restaurant-about-page .showcase-hero-body p {
+    font-size: 0.9rem;
+  }
+
+  .restaurant-about-page .legacy-media-box {
+    height: 280px;
+  }
+
+  .restaurant-about-page .masterchef-photo-frame {
+    height: 280px;
+  }
+
+  .restaurant-about-page .reviews-text-group blockquote {
+    font-size: 1.6rem;
+  }
+
+  .restaurant-about-page .calltoaction-message h2 {
+    font-size: 2.7rem;
+  }
+}

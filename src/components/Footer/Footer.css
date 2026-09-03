@@ -1,0 +1,368 @@
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+  width: 100%;
+  font-family: "Karla", sans-serif;
+  background-color: #ffffff;
+}
+
+/* =========================================
+   SHARED CONTAINER
+========================================= */
+.footer-container {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+}
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+.footer-main {
+  padding: 3.5rem 0 2.5rem;
+  background-color: #faf9f6;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns:
+    1.4fr
+    0.8fr
+    1fr
+    1.2fr
+    1.4fr;
+  gap: 3rem;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+.footer-brand {
+  max-width: 250px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+}
+
+.footer-logo img {
+  width: 3.5rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-logo-text span {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #26332f;
+}
+
+.footer-logo-text small {
+  margin-top: 0.25rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #495e57;
+}
+
+.footer-brand > p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #65706b;
+}
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #26332f;
+  font-size: 1.3rem;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #495e57;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+.footer-column h3 {
+  margin: 0 0 1.4rem;
+  font-family: "Markazi Text", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: #26332f;
+}
+
+.footer-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-column li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-column a {
+  font-size: 0.9rem;
+  color: #65706b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #495e57;
+}
+
+/* =========================================
+   HOURS
+========================================= */
+.footer-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-hours div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-hours strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #46514d;
+}
+
+.footer-hours span {
+  font-size: 0.9rem;
+  color: #65706b;
+  white-space: nowrap;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-style: normal;
+}
+
+.footer-contact div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.footer-contact svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: #26332f;
+  font-size: 1rem;
+}
+
+.footer-contact span,
+.footer-contact a {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #65706b;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #495e57;
+}
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+.footer-newsletter > p {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #65706b;
+}
+
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  height: 3.2rem;
+  border: 1px solid #dedbd3;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 0 1.1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Karla", sans-serif;
+  font-size: 0.875rem;
+  color: #26332f;
+}
+
+.newsletter-form input::placeholder {
+  color: #9a9f9b;
+}
+
+.newsletter-form button {
+  width: 4.5rem;
+  flex-shrink: 0;
+  border: none;
+  background-color: #f4ce14;
+  color: #495e57;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e5bd00;
+}
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+.footer-bottom {
+  background-color: #faf9f6;
+}
+
+.footer-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e2dfd7;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #7a817d;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-legal a,
+.footer-legal span {
+  font-size: 0.8rem;
+  color: #7a817d;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: #495e57;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 1000px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3rem;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 768px) {
+  .footer-container {
+    width: calc(100% - 2.5rem);
+  }
+
+  .footer-main {
+    padding: 3rem 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 450px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+@media (max-width: 480px) {
+  .footer-container {
+    width: calc(100% - 2rem);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 1rem;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+  }
+}
