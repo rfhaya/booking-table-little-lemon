@@ -453,16 +453,16 @@ export default function Reservations() {
 
   const handleSelectTable = (table) => {
     setSelectedTable(table);
-  };
+  // };
 
-  const handleSelectRoom = (room) => {
-    if (selectedRoom?.id === room.id) {
-      setSelectedRoom(null);
-      return;
-    }
+  // const handleSelectRoom = (room) => {
+  //   if (selectedRoom?.id === room.id) {
+  //     setSelectedRoom(null);
+  //     return;
+  //   }
 
-    setSelectedRoom(room);
-  };
+  //   setSelectedRoom(room);
+  // };
   /* =========================================
      CONTINUE TO CONFIRMATION
   ========================================= */

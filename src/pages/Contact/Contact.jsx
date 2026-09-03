@@ -36,15 +36,6 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -269,6 +260,7 @@ export default function Contact() {
                           id="email"
                           type="email"
                           placeholder="Your email"
+                          value={formData.name}
                           required
                         />
                       </div>

@@ -7,6 +7,7 @@ import {
   faMapMarkerAlt,
   faPaperPlane,
   faPhoneAlt,
+  faX,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
@@ -33,14 +34,14 @@ export default function Footer() {
             </p>
 
             <div className="footer-socials">
-              <a href="#" aria-label="Facebook">
+              <a href="https://www.instagram.com/" aria-label="Facebook">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.facebook.com/" aria-label="Instagram">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="#" aria-label="Twitter">
-                <FontAwesomeIcon icon={faTwitter} />
+              <a href="https://x.com/" aria-label="X">
+                <FontAwesomeIcon icon={faX} />
               </a>
             </div>
           </div>
