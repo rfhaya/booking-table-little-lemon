@@ -30,6 +30,29 @@ import { faCanadianMapleLeaf } from "@fortawesome/free-brands-svg-icons";
 import { privateRooms, rooms, tables } from "../../mock-data/tables";
 import { existingBookings } from "../../mock-data/existingBookings";
 
+const timeToMinutes = (time) => {
+  const [hours, minutes] = time.split(":").map(Number);
+  return hours * 60 + minutes;
+};
+
+const isTimeBooked = (
+  selectedDate,
+  selectedTime,
+  bookingDate,
+  bookingTime,
+  duration,
+) => {
+  if (selectedDate !== bookingDate) {
+    return false;
+  }
+
+  const selectedMinutes = timeToMinutes(selectedTime);
+  const bookingStart = timeToMinutes(bookingTime);
+  const bookingEnd = bookingStart + duration * 60;
+
+  return selectedMinutes >= bookingStart && selectedMinutes < bookingEnd;
+};
+
 export default function Reservations() {
   const [bookingStep, setBookingStep] = useState(1);
 
@@ -50,11 +73,6 @@ export default function Reservations() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const [selectedRoom, setSelectedRoom] = useState(null);
-
-  const timeToMinutes = (time) => {
-    const [hours, minutes] = time.split(":").map(Number);
-    return hours * 60 + minutes;
-  };
 
   const tableScrollRef = useRef(null);
   const isDragging = useRef(false);
@@ -123,25 +141,6 @@ export default function Reservations() {
     const day = String(today.getDate()).padStart(2, "0");
 
     return `${year}-${month}-${day}`;
-  };
-
-  const isTimeBooked = (
-    selectedDate,
-    selectedTime,
-    bookingDate,
-    bookingTime,
-    duration,
-  ) => {
-    if (selectedDate !== bookingDate) {
-      return false;
-    }
-
-    const selectedMinutes = timeToMinutes(selectedTime);
-    const bookingStart = timeToMinutes(bookingTime);
-    const bookingEnd = bookingStart + duration * 60;
-
-    // Waktu yang dipilih berada dalam durasi booking
-    return selectedMinutes >= bookingStart && selectedMinutes < bookingEnd;
   };
 
   /* =========================================
@@ -280,14 +279,14 @@ export default function Reservations() {
   });
 
   /* =========================================
-   GUEST COUNT
-========================================= */
+     GUEST COUNT
+  ========================================= */
 
   const getGuestCount = () => Number(bookingData.guests) || 0;
 
   /* =========================================
-   CHECK TABLE BOOKING
-========================================= */
+     CHECK TABLE BOOKING
+  ========================================= */
 
   const isTableBooked = (table) => {
     if (!bookingData.date || !bookingData.time) {
@@ -296,9 +295,7 @@ export default function Reservations() {
 
     return existingBookings.some((booking) => {
       if (booking.type !== "table") return false;
-
       if (booking.tableId !== table.id) return false;
-
       if (booking.area !== table.area) return false;
 
       return isTimeBooked(
@@ -312,8 +309,8 @@ export default function Reservations() {
   };
 
   /* =========================================
-   CHECK ROOM BOOKING
-========================================= */
+     CHECK ROOM BOOKING
+  ========================================= */
 
   const isRoomBooked = (room) => {
     if (!bookingData.date || !bookingData.time) {
@@ -322,7 +319,6 @@ export default function Reservations() {
 
     return existingBookings.some((booking) => {
       if (booking.type !== "area") return false;
-
       if (booking.roomId !== room.id) return false;
 
       return isTimeBooked(
@@ -336,28 +332,24 @@ export default function Reservations() {
   };
 
   /* =========================================
-   TABLE STATUS
-========================================= */
+     TABLE STATUS
+  ========================================= */
 
   const getTableStatus = (table) => {
     const guests = getGuestCount();
 
-    // Table manually unavailable
     if (!table.available) {
       return "unavailable";
     }
 
-    // Date dan time wajib untuk cek booking
     if (!bookingData.date || !bookingData.time) {
       return "locked";
     }
 
-    // Table sudah dibooking pada waktu tersebut
     if (isTableBooked(table)) {
       return "unavailable";
     }
 
-    // Kalau guest sudah dipilih, baru cek kapasitas
     if (guests > 0 && table.seats < guests) {
       return "unavailable";
     }
@@ -366,21 +358,18 @@ export default function Reservations() {
   };
 
   /* =========================================
-   ROOM STATUS
-========================================= */
+     ROOM STATUS
+  ========================================= */
 
   const getRoomStatus = (room) => {
-    // Room manually unavailable
     if (!room.available) {
       return "unavailable";
     }
 
-    // Date dan time belum dipilih
     if (!bookingData.date || !bookingData.time) {
       return "locked";
     }
 
-    // Room sudah dibooking
     if (isRoomBooked(room)) {
       return "unavailable";
     }
@@ -389,29 +378,69 @@ export default function Reservations() {
   };
 
   /* =========================================
-   RESET INVALID TABLE
-========================================= */
+     RESET INVALID TABLE
+  ========================================= */
 
   useEffect(() => {
     if (!selectedTable) return;
 
-    const status = getTableStatus(selectedTable);
+    const guests = Number(bookingData.guests) || 0;
 
-    if (status !== "available") {
+    const tableBooked = existingBookings.some((booking) => {
+      if (!bookingData.date || !bookingData.time) return false;
+      if (booking.type !== "table") return false;
+      if (booking.tableId !== selectedTable.id) return false;
+      if (booking.area !== selectedTable.area) return false;
+
+      return isTimeBooked(
+        bookingData.date,
+        bookingData.time,
+        booking.date,
+        booking.time,
+        booking.duration,
+      );
+    });
+
+    const isUnavailable =
+      !selectedTable.available ||
+      !bookingData.date ||
+      !bookingData.time ||
+      tableBooked ||
+      (guests > 0 && selectedTable.seats < guests);
+
+    if (isUnavailable) {
       setSelectedTable(null);
     }
   }, [bookingData.date, bookingData.time, bookingData.guests, selectedTable]);
 
   /* =========================================
-   RESET INVALID ROOM
-========================================= */
+     RESET INVALID ROOM
+  ========================================= */
 
   useEffect(() => {
     if (!selectedRoom) return;
 
-    const status = getRoomStatus(selectedRoom);
+    const roomBooked = existingBookings.some((booking) => {
+      if (!bookingData.date || !bookingData.time) return false;
+      if (booking.type !== "area") return false;
+      if (booking.roomId !== selectedRoom.id) return false;
 
-    if (status !== "available") {
+      return isTimeBooked(
+        bookingData.date,
+        bookingData.time,
+        booking.date,
+        booking.time,
+        booking.duration,
+      );
+    });
+
+    const isUnavailable =
+      !selectedRoom.available ||
+      !bookingData.date ||
+      !bookingData.time ||
+      roomBooked;
+
+    if (isUnavailable) {
       setSelectedRoom(null);
     }
   }, [bookingData.date, bookingData.time, selectedRoom]);
@@ -463,7 +492,7 @@ export default function Reservations() {
 
   //   setSelectedRoom(room);
   // };
-  
+
   /* =========================================
      CONTINUE TO CONFIRMATION
   ========================================= */
@@ -558,7 +587,8 @@ export default function Reservations() {
 
   const renderStepIcon = (step) => {
     const completed =
-      (step === 1 && bookingComplete) || (step === 2 && selectedTable);
+      (step === 1 && bookingComplete) ||
+      (step === 2 && (selectedTable || selectedRoom));
 
     if (completed) {
       return <FontAwesomeIcon icon={faCheck} />;
@@ -658,7 +688,7 @@ export default function Reservations() {
                 <div
                   className={`reservation-step ${
                     bookingStep >= 2 ? "active" : ""
-                  } ${selectedTable ? "completed" : ""}`}
+                  } ${selectedTable || selectedRoom ? "completed" : ""}`}
                 >
                   <span className="reservation-step__number">
                     {renderStepIcon(2)}
@@ -1253,7 +1283,16 @@ export default function Reservations() {
 
                               <div className="private-rooms-list">
                                 {privateRooms.map((room) => {
-                                  const roomStatus = getRoomStatus(room);
+                                  const privateTable = {
+                                    ...room,
+                                    area: "private",
+                                    seats: room.seats,
+                                    available: room.available !== false,
+                                    type: "private",
+                                  };
+
+                                  const roomStatus =
+                                    getTableStatus(privateTable);
 
                                   const available = roomStatus === "available";
                                   const locked = roomStatus === "locked";
@@ -1276,12 +1315,7 @@ export default function Reservations() {
                                       }`}
                                       onClick={() => {
                                         if (available) {
-                                          handleSelectTable({
-                                            id: room.id,
-                                            area: "private",
-                                            seats: room.seats,
-                                            type: "private",
-                                          });
+                                          handleSelectTable(privateTable);
                                         }
                                       }}
                                     >
