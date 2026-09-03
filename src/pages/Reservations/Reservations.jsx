@@ -453,7 +453,7 @@ export default function Reservations() {
 
   const handleSelectTable = (table) => {
     setSelectedTable(table);
-  // };
+  };
 
   // const handleSelectRoom = (room) => {
   //   if (selectedRoom?.id === room.id) {
