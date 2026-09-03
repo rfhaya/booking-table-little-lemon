@@ -17,7 +17,7 @@ import {
 
 import ScrollReveal from "../../components/ScrollReveal/ScrollReveal";
 
-import { menuCategories, menuData } from "../../mock-data/menu";
+import { menuData } from "../../mock-data/menu";
 
 function Home() {
   const seasonalFavorites = [

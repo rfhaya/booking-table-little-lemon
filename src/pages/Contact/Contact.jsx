@@ -312,7 +312,7 @@ export default function Contact() {
                     </div>
 
                     <button type="submit" className="contact-submit-button">
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                       <span>
                         <FontAwesomeIcon icon={faPaperPlane} />
                       </span>
