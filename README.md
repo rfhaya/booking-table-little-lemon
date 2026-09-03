@@ -69,7 +69,7 @@ npm run build
 
 ## 🌐 Live Demo
 
-Coming soon...
+https://booking-table-little-lemon.vercel.app/
 
 ## 📸 Preview
 
